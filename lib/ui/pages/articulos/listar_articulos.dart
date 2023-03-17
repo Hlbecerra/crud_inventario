@@ -66,7 +66,8 @@ class _ListarArticulosState extends State<ListarArticulos> {
             ),
             trailing: CircleAvatar(
               radius: 15.0,
-              backgroundColor: (_listaArticulos[index].estado)
+              backgroundColor: (_listaArticulos[index].estado &&
+                      _listaArticulos[index].cantidad.toString() != '0')
                   ? Colors.greenAccent
                   : Colors.redAccent,
               child: (_listaArticulos[index].estado)
